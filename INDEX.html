@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Shapes Quiz</h1>
+        <p id="question"></p>
+
+        <div class="options">
+            <div class="option" onclick="checkAnswer('Triangle')" id="triangle">
+                <div class="shape"></div>
+                <p>Triangle</p>
+            </div>
+            <div class="option" onclick="checkAnswer('Square')" id="square">
+                <div class="shape"></div>
+                <p>Square</p>
+            </div>
+            <div class="option" onclick="checkAnswer('Rectangle')" id="rectangle">
+                <div class="shape"></div>
+                <p>Rectangle</p>
+            </div>
+            <div class="option" onclick="checkAnswer('Star')" id="star">
+                <div class="shape"></div>
+                <p>Star</p>
+            </div>
+        </div>
+
+        <p id="result"></p>
+        <button id="next-button" onclick="nextQuestion()" style="display: none;">Next Question</button>
+        <button id="restart-button" onclick="restartGame()" style="display: none;">Restart Game</button>
+    </div>
+
+    <!-- Sound effects -->
+    <audio id="correct-sound" src="correct.mp3"></audio>
+    <audio id="incorrect-sound" src="incorrect.mp3"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>

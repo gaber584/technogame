@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #ffcccc, #ffffff, #99ccff);
+    overflow: hidden;
+}
+
+#game-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffffc7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #333;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.option {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 90px;
+}
+
+.option:hover {
+    transform: scale(1.1);
+}
+
+.shape {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/* Triangle */
+#triangle .shape {
+    width: 0;
+    height: 0;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-bottom: 60px solid #ffa500;
+}
+
+/* Square */
+#square .shape {
+    width: 70px;
+    height: 70px;
+    background-color: #00ff00;
+}
+
+/* Rectangle */
+#rectangle .shape {
+    width: 90px;
+    height: 50px;
+    background-color: #8a2be2;
+}
+
+/* Star */
+#star .shape {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color: #ff69b4;
+    width: 70px;
+    height: 70px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#result {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
